@@ -19,13 +19,29 @@
         }
     ],
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
-        "setrun/setrun-sys": "*"
+        "setrun/setrun-sys": "*",
+        "kartik-v/yii2-date-range": "dev-master",
+        "kartik-v/yii2-field-range": "dev-master",
+        "kartik-v/yii2-widgets": "*",
+        "yiidoc/yii2-redactor": "^2.0",
+        "yiidoc/yii2-timeago": "^2.0",
+        "kotchuprik/yii2-sortable-widgets": "^2.0",
+        "2amigos/yii2-date-picker-widget": "^1.0",
+        "2amigos/yii2-transliterator-helper": "^0.1.0",
+        "codemix/yii2-localeurls": "^1.4",
+        "mongosoft/yii2-upload-behavior": "*",
     },
     "repositories": [
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        {
+            "name": "yiidoc/yii2-timeago",
+            "type": "vcs",
+            "url": "git@github.com:dizirator/yii2-timeago.git"
         }
     ],
     "autoload": {
