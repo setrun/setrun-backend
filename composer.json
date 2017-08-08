@@ -31,7 +31,7 @@
         "2amigos/yii2-date-picker-widget": "^1.0",
         "2amigos/yii2-transliterator-helper": "^0.1.0",
         "codemix/yii2-localeurls": "^1.4",
-        "mongosoft/yii2-upload-behavior": "*",
+        "mongosoft/yii2-upload-behavior": "*"
     },
     "repositories": [
         {
