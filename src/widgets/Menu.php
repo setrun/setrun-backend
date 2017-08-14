@@ -44,6 +44,7 @@ class Menu extends \yii\widgets\Menu
     public function init()
     {
         $this->items = $this->getItems();
+        ksort($this->items);
         parent::init();
     }
 
