@@ -8,7 +8,8 @@
 namespace setrun\backend\components\grid;
 
 use Yii;
-use yii\helpers\{Html,ArrayHelper};
+use yii\helpers\Html;
+use setrun\sys\helpers\ArrayHelper;
 
 /**
  * ActionColumn is a column for the [[GridView]] widget that displays buttons for viewing and manipulating the items.
@@ -51,7 +52,7 @@ class ActionColumn extends \yii\grid\ActionColumn
             $this->buttons['delete'] = function ($url, $model, $key) {
                 $options = ArrayHelper::merge([
                     'class'        => 'btn btn-default',
-                    'data-confirm' => Yii::t('sys/backend', 'Do you want to delete ?'),
+                    'data-confirm' => Yii::t('setrun/backend', 'Do you want to delete ?'),
                     'data-method'  => 'post',
                     'data-pjax'    => 0
                 ], $this->buttonOptions);

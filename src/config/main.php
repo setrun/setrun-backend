@@ -7,6 +7,20 @@
 
 
 return [
+    'components' => [
+        'i18n' => [
+            'translations' => [
+                'setrun/backend' => [
+                    'class'    => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@setrun/content/messages',
+                    'fileMap' => [
+                        'setrun/backend' => 'backend.php',
+
+                    ]
+                ]
+            ]
+        ],
+    ],
     'modules' => [
         'backend' => 'setrun\backend\Module'
     ]
