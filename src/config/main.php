@@ -12,7 +12,7 @@ return [
             'translations' => [
                 'setrun/backend' => [
                     'class'    => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@setrun/content/messages',
+                    'basePath' => '@setrun/backend/messages',
                     'fileMap' => [
                         'setrun/backend' => 'backend.php',
 
