@@ -1,7 +1,7 @@
 {
-    "name": "setrun/setrun-backend",
+    "name": "setrun/setrun-backend-component",
     "description": "Backend component for SETRUN CMS",
-    "keywords": ["yii2", "setrun", "framework", "module", "component", "yii2-extension", "extension"],
+    "keywords": ["yii2", "yii2-extension", "yii2-cms", "cms", "setrun", "setrun-cms", "setrun-extension"],
     "homepage": "http://setrun.ru",
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
@@ -19,7 +19,7 @@
         }
     ],
     "require": {
-        "setrun/setrun-sys": "*",
+        "setrun/setrun-sys-component": "*",
         "kartik-v/yii2-date-range": "*",
         "kartik-v/yii2-field-range": "*",
         "kartik-v/yii2-widgets": "*",
