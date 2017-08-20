@@ -24,7 +24,7 @@
         "kartik-v/yii2-field-range": "*",
         "kartik-v/yii2-widgets": "*",
         "yiidoc/yii2-redactor": "^2.0",
-        "yiidoc/yii2-timeago": "^2.0",
+        "yiidoc/yii2-timeago": "@dev",
         "kotchuprik/yii2-sortable-widgets": "^2.0",
         "2amigos/yii2-date-picker-widget": "^1.0",
         "2amigos/yii2-transliterator-helper": "^0.1.0",
