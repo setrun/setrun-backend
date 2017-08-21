@@ -1,5 +1,5 @@
 {
-    "name": "setrun/setrun-backend-component",
+    "name": "setrun/setrun-component-backend",
     "description": "Backend component for SETRUN CMS",
     "keywords": ["yii2", "yii2-extension", "yii2-cms", "cms", "setrun", "setrun-cms", "setrun-extension"],
     "homepage": "http://setrun.ru",
@@ -19,12 +19,12 @@
         }
     ],
     "require": {
-        "setrun/setrun-sys-component": "*",
+        "setrun/setrun-component-sys": "*",
         "kartik-v/yii2-date-range": "*",
         "kartik-v/yii2-field-range": "*",
         "kartik-v/yii2-widgets": "*",
         "yiidoc/yii2-redactor": "^2.0",
-        "yiidoc/yii2-timeago": "@dev",
+        "yiidoc/yii2-timeago": "dev-master",
         "kotchuprik/yii2-sortable-widgets": "^2.0",
         "2amigos/yii2-date-picker-widget": "^1.0",
         "2amigos/yii2-transliterator-helper": "^0.1.0",
