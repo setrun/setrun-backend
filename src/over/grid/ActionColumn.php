@@ -5,7 +5,7 @@
  * @link   https://github.com/dizirator
  */
 
-namespace setrun\backend\components\grid;
+namespace setrun\backend\over\grid;
 
 use Yii;
 use yii\helpers\Html;
@@ -51,8 +51,9 @@ class ActionColumn extends \yii\grid\ActionColumn
         if (!isset($this->buttons['delete'])) {
             $this->buttons['delete'] = function ($url, $model, $key) {
                 $options = ArrayHelper::merge([
-                    'class' => 'btn btn-xs btn-default delete-item',
+                    'class' => 'btn btn-xs btn-default ajax-delete-item',
                     'data-confirm-message' => Yii::t('setrun/backend', 'Do you want to delete ?'),
+                    'data-grid-view' => 1,
                     'data-pjax' => 0
                 ], $this->buttonOptions);
                 return Html::a('<i class="fa fa-trash"></i>', $url, $options);
