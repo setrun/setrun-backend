@@ -9,6 +9,9 @@ namespace setrun\backend\assets;
 
 use setrun\sys\over\web\AssetBundle;
 
+/**
+ * Class BackendAsset.
+ */
 class BackendAsset extends  AssetBundle
 {
     /**
@@ -16,8 +19,11 @@ class BackendAsset extends  AssetBundle
      */
     public $sourcePath = '@setrun/backend/assets/dist';
 
+    /**
+     * @inheritdoc
+     */
     public $js = [
-        'js/plugins.js',
+        'js/helpers.js',
         'js/backend.js'
     ];
 

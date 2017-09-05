@@ -5,5 +5,3 @@
  * @link   https://github.com/dizirator
  */
 ?>
-
-Hello World - Backend

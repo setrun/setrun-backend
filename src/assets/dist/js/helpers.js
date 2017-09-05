@@ -4,12 +4,12 @@
     /**
      *
      */
-    Setrun.setPlugin('noty', (function ($) {
+    Setrun.setHelper('noty', (function ($) {
         var pub = {
             defaults: {
-                layout: 'bottomLeft',
-                type: 'success',
-                timeout: 3000
+                layout  : 'bottomLeft',
+                type    : 'success',
+                timeout : 3000
             },
             init: function () {
             },
@@ -30,26 +30,25 @@
                 if (typeof window.Noty === 'undefined') {
                     alert(msg);
                 } else {
-                    type = type || pub.defaults.type;
-                    layout = layout || pub.defaults.layout;
+                    type    = type    || pub.defaults.type;
+                    layout  = layout  || pub.defaults.layout;
                     timeout = timeout || pub.defaults.timeout;
                     new Noty({
-                        text: msg,
-                        type: type,
-                        layout: layout,
-                        timeout: timeout
+                        text    : msg,
+                        type    : type,
+                        layout  : layout,
+                        timeout : timeout
                     }).show();
                 }
             }
         };
-
         return pub;
     }(jQuery)));
 
     /**
      *
      */
-    Setrun.setPlugin('helper', {
+    Setrun.setHelper('base', {
         clearFilter : function () {
             var href = document.location.href.split('?')[0];
             history.pushState({}, '', href);
@@ -93,7 +92,7 @@
                             fn(key, value);
                         }
                         setTimeout(function () {
-                            Setrun.plugin('noty').error(value);
+                            Setrun.helper('noty').error(value);
                         }, timeout);
                         timeout = timeout + 50;
                     });
@@ -101,6 +100,4 @@
             }
         }
     });
-
-
 })(jQuery, Setrun);

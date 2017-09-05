@@ -3,8 +3,6 @@
 
     var Component = {};
 
-    Component.autoload = true;
-
     /**
      * Event handlers
      * @type {object}
@@ -47,17 +45,14 @@
         }
     };
 
-
-
     /**
      * Create a handler for the clear filters
      * @param {object} e Event object
      */
     Component.clearFilterHandle = function (e)
     {
-        Setrun.plugin('helper').clearFilter();
+        Setrun.helper('base').clearFilter();
     };
-
 
     /**
      *
@@ -67,7 +62,7 @@
      */
     Component.ajaxCompleteHandle = function (e, xhr, settings) {
         if (typeof settings.url !== 'undefined' && settings.url.indexOf('sorting') > 0) {
-            Setrun.plugin('helper').pjaxReload();
+            Setrun.helper('base').pjaxReload();
         }
     };
 
@@ -82,7 +77,7 @@
         $.map(messages, function (value, key) {
             if (typeof value[0] !== 'undefined') {
                 setTimeout(function () {
-                    Setrun.plugin('noty').error(value[0]);
+                    Setrun.helper('noty').error(value[0]);
                 }, timeout);
                 timeout = timeout + 50;
             }
@@ -125,7 +120,7 @@
                 message = Setrun.fn.lang('formSuccess');
             }
             if (message) {
-                Setrun.plugin('noty').success(message);
+                Setrun.helper('noty').success(message);
             }
         };
         options.onError = function(res){
@@ -134,7 +129,7 @@
                 $btn.removeAttr('disabled');
             }, 500);
             $form.trigger($.Event('form-request:error'), [res]);
-            Setrun.plugin('helper').notyErrors(res, function (key, value) {
+            Setrun.helper('base').notyErrors(res, function (key, value) {
                 $form.yiiActiveForm('updateAttribute', key, [value]);
             });
         };
@@ -163,7 +158,7 @@
             $doc.trigger($.Event('item-delete-request:success'), [res]);
             if (!redirect && grid) {
                 $el.parents('tr').remove();
-                Setrun.plugin('helper').pjaxReload();
+                Setrun.helper('base').pjaxReload();
             }
             if (redirect) {
                 location.href = redirect;
@@ -172,7 +167,7 @@
         };
         options.onError = function (res) {
             $doc.trigger($.Event('item-delete-request:error'), [res]);
-            Setrun.plugin('helper').notyErrors(res);
+            Setrun.helper('base').notyErrors(res);
         };
 
         if (url) {
